@@ -3,8 +3,8 @@ toc: false
 ---
 
 <div class="hero">
-  <h1>CRaTT</h1>
-  <h2> Petite application pour observer les performance des algorithmes de segmentation </h2>
+  <h1>Impervious Europe</h1>
+  <h2> A dashboard for the 2025 European Big Data Hackathon displaying land use evolution  </h2>
 </div>
 
 <style>
