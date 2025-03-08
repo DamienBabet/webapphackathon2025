@@ -87,45 +87,45 @@ function updateMapLayer(yearIndex) {
 
 
 ```js
-const nuts3 = FileAttachment("./data/nuts3.json").json()
+//const nuts3 = FileAttachment("./data/nuts3.json").json()
 
 // const geom = await loadDepartmentGeom(department);
 // const level = await loadDepartmentLevel(department);
 // const evol = await loadDepartmentEvol(department);
-const available_years = ['2018','2021']
-const available_nuts = ['BE100','BE251','FRK26','FRJ27']
+//const available_years = ['2018','2021']
+//const available_nuts = ['BE100','BE251','FRK26','FRJ27']
 ```
 
 
 ```js
-const years_select = view(Inputs.form({
-  year_start : Inputs.select(available_years, {value: available_years[0], label: "start"}),
-  year_end : Inputs.select(available_years, {value: available_years[1], label: "end"})
-},
- {
-    template: (formParts) => htl.html`
-     <div>
-       <div style="
-         width: 400px;
-         display: flex;
-         gap: 10px;
-       ">
-         ${Object.values(formParts)}
-       </div>
-     </div>`
-  }
-))
+//const years_select = view(Inputs.form({
+//  year_start : Inputs.select(available_years, {value: available_years[0], label: "start"}),
+//  year_end : Inputs.select(available_years, {value: available_years[1], label: "end"})
+//},
+// {
+//    template: (formParts) => htl.html`
+//     <div>
+//       <div style="
+//         width: 400px;
+//         display: flex;
+//         gap: 10px;
+//       ">
+//         ${Object.values(formParts)}
+//       </div>
+//     </div>`
+//  }
+//))
 ```
 
 ```js
-const year_start = years_select["year_start"]
-const year_end = years_select["year_end"]
+//const year_start = years_select["year_start"]
+//const year_end = years_select["year_end"]
 //const data_select = transformData(evol, level, year_start, year_end);
 ```
 
 ```js
  //récupération du centre de l'ilot à partir de l'ilot sélectionné
-const placeholder_nuts = available_nuts[0]
+//const placeholder_nuts = available_nuts[0]
  ```
 
  ```js
