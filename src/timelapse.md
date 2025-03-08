@@ -32,6 +32,30 @@ display(html`<div>Selected Year: ${selectedYear}</div>`);
 ```
 
 ```js
+function updateMapLayer(yearIndex) {
+  const year = available_years[yearIndex];
+
+  // Remove existing layers
+  if (selectedSentinel2) {
+    Object.values(selectedSentinel2).forEach(layer => {
+      layer.removeFrom(map);
+    });
+  }
+
+  // Load the new layers for the selected year
+  const newSentinel2 = filterObject(Sentinel2, [`Sentinel2 ${year}`]);
+  Object.values(newSentinel2).forEach(layer => {
+    layer.addTo(map);
+  });
+
+  // Update the selected year label
+  selectedYear = year;
+  display(html`<div>Selected Year: ${selectedYear}</div>`);
+}
+
+```
+
+```js
 let timeLapseInterval;
 
 const playPauseButton = view(Inputs.button({
@@ -61,29 +85,7 @@ function startTimeLapse() {
 }
 ```
 
-```js
-function updateMapLayer(yearIndex) {
-  const year = available_years[yearIndex];
 
-  // Remove existing layers
-  if (selectedSentinel2) {
-    Object.values(selectedSentinel2).forEach(layer => {
-      layer.removeFrom(map);
-    });
-  }
-
-  // Load the new layers for the selected year
-  const newSentinel2 = filterObject(Sentinel2, [`Sentinel2 ${year}`]);
-  Object.values(newSentinel2).forEach(layer => {
-    layer.addTo(map);
-  });
-
-  // Update the selected year label
-  selectedYear = year;
-  display(html`<div>Selected Year: ${selectedYear}</div>`);
-}
-
-```
 
 
 ```js
