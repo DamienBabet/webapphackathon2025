@@ -39,7 +39,7 @@ toc: false
 
   /* Grande police pour le titre */
   font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.2;
   
   /* Effet de dégradé dans le texte */
