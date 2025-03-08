@@ -6,7 +6,7 @@ export default {
       { name: "",
         path: "/",
         pages: [
-          {name: "Dashboard", path: "dashboard"}
+          {name: "Dashboard", path: "dashboard"},
           {name: "Time Lapse", path: "timelapse"}
         ]
       }
