@@ -186,43 +186,43 @@ console.log(center)
 ``` -->
 ```js
 // Initialisation de la carte Leaflet
-const mapDiv = display(document.createElement("div"));
-mapDiv.style = "height: 600px; width: 100%; margin: 0 auto;";
-const center = [50.850346, 4.351721];
+//const mapDiv = display(document.createElement("div"));
+//mapDiv.style = "height: 600px; width: 100%; margin: 0 auto;";
+//const center = [50.850346, 4.351721];
   
 // Initialiser la carte avec la position centrale du département
-const map = L.map(mapDiv, {
-            center: center,
-            zoom: 17,           
-            maxZoom: 21 //(or even higher)
-        });
+//const map = L.map(mapDiv, {
+//            center: center,
+//            zoom: 17,           
+//            maxZoom: 21 //(or even higher)
+//        });
 
 // Ajout d'une couche de base OpenStreetMap
-const OSM = getOSM();
-const OSMDark  = getOSMDark();
-const marker = getMarker(center);
-const BORDERS = getClusters(nuts3);
+//const OSM = getOSM();
+//const OSMDark  = getOSMDark();
+//const marker = getMarker(center);
+//const BORDERS = getClusters(nuts3);
 
-const Sentinel2 = getSatelliteImages();
-const selectedSentinel2 = filterObject(Sentinel2, [`Sentinel2 ${year_start}`, `Sentinel2 ${year_end}`,])
+//const Sentinel2 = getSatelliteImages();
+//const selectedSentinel2 = filterObject(Sentinel2, [`Sentinel2 ${year_start}`, `Sentinel2 ${year_end}`,])
 
-OSM['OpenStreetMap clair'].addTo(map);
-BORDERS["nuts boundaries"].addTo(map);
+//OSM['OpenStreetMap clair'].addTo(map);
+//BORDERS["nuts boundaries"].addTo(map);
 
-marker.addTo(map);
+//marker.addTo(map);
 ```
 
 ```js
- L.control.layers({
-   ...OSM,
-   ...OSMDark,  
-   },
-{ ...selectedSentinel2}
+// L.control.layers({
+//   ...OSM,
+//   ...OSMDark,  
+//   },
+//{ ...selectedSentinel2}
 //   { ...selectedPleiades,
 //   [`Bâtiments ${year_start}`]: buildingLayerStart,
 //   [`Bâtiments ${year_end}`]: buildingLayerEnd,
 //   }
-).addTo(map);
+//).addTo(map);
 
 // // Définition des labels et couleurs
 // const legendItems = [
